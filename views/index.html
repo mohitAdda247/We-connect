@@ -87,6 +87,12 @@
           str += '<a href="/'+document.getElementById('TBox').value+'">Click to enter room</a>';
           document.getElementById('tlink').innerHTML = str;
         }
+
+        function dos(){
+                let link = "./"+document.getElementById('TBox').value
+                window.location.href = link
+                    
+                }
         </script>
   </head>
   <body>
@@ -98,7 +104,7 @@
               <h1>Login</h1>
               <p class="text-muted">Please enter your Room Id</p>
               <input type="text" id="TBox" name="" placeholder="RoomId" />
-              <input type="submit" onsubmit="CreateLink()" name="" value="Enter Room" href="#" />
+              <input onclick="dos()" type="submit" name="" value="Enter Room" href="./${item.value}" />
             </form>
           </div>
         </div>
