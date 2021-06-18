@@ -9,6 +9,11 @@
 	
 	flex-wrap: wrap;
 }
+#video {
+  border: 1px solid #999;
+  width: 98%;
+  max-width: 860px;
+}
 
 video {
 	height: 300px;
@@ -29,8 +34,14 @@ video {
 	display: flex;
 	flex-direction: column;
 }
-
+#video {
+  border: 1px solid #999;
+  width: 98%;
+  max-width: 860px;
+}
 .mainVideos {
+    display: flex;
+    flex-direction: column;
 	flex-grow: 1;
 	background-color: #222222;
 	display: flex;
