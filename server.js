@@ -12,9 +12,12 @@ app.use('/peerjs', peerServer)
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
 	res.redirect(`/${uuidv4()}`)
-})
+}) */
+app.get('/', (req,res) => {
+    res.sendFile(__dirname +'/views/index.html');
+   })
 
 app.get('/:room', (req, res) => {
 	res.render('room', { roomId: req.params.room })
@@ -33,7 +36,8 @@ io.on('connection', (socket) => {
 		})
 	})
 })
+const PORT =server.listen(5000);
 
-const PORT = process.env.PORT || 5000
+//const PORT = process.env.PORT || 5000
 
-server.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+//server.listen(PORT, () => console.log(`Listening on port ${PORT}`))

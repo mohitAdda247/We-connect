@@ -6,12 +6,16 @@
 #videoGrid {
 	display: flex;
 	justify-content: center;
+	
+	flex-wrap: wrap;
 }
 
 video {
 	height: 300px;
 	width: 400px;
-	object-fit: cover;
+	/*object-fit: cover; */
+	object-fit: contain;
+	
 }
 
 .main {
@@ -32,6 +36,8 @@ video {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	overflow-y: scroll;
 }
 
 .mainControls {
